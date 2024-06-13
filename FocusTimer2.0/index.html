@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap" rel="stylesheet">
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Focus Timer - Temporizador</title>
+    
+    <link rel="stylesheet" href="style.css">
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    <script type="module" src="main.js" defer></script>
+</head>
+<body>
+    <div id="app" class="flex">
+        
+       <div class="timerDisplay">
+        <section id="timer" class="flex">
+            <span id="minutes">00</span>
+            <span>:</span>
+            <span id="seconds">00</span>
+        </section>
+        
+        <section id="controls" class="flex">
+            <button 
+                data-action="toggleRunning" 
+                class="ph-bold ph-play-circle">
+                <span class="sr-only">Iniciar contador</span>
+            </button>
+
+            <button 
+            data-action="toggleRunning"
+            class="ph-bold ph-pause-circle">
+                <span class="sr-only">Pausar contador</span>
+            </button>
+        
+            <button 
+                data-action="reset" 
+                class="ph-bold ph-stop-circle">
+                <span class="sr-only">Parar/Reiniciar contador</span>
+            </button>
+    
+            <button 
+                data-action="addTime" 
+                class="ph-bold ph-plus-circle">
+                <span class="sr-only">Aumentar tempo</span>
+            </button>
+            <button
+                data-action="reduceTime" 
+                class="ph-bold ph-minus-circle">
+                <span class="sr-only">Reduzir tempo</span>
+            </button>
+        </section>
+       </div>
+        
+        <section id="sounds">
+            <button
+                class="effect"
+                data-action="forestSound" 
+                id="tree">
+                <i data-action="forestSound" class="ph ph-tree"></i>
+                <span class="sr-only">Som de floresta</span>
+            </button>
+
+            <button
+            class="effect"
+                data-action="rainSound" 
+                id="rain">
+                <i data-action="rainSound" class="ph ph-cloud-snow"></i>
+                <span class="sr-only">Som de chuva</span>
+            </button>
+
+            <button
+            class="effect"
+                data-action="CoffeeShopSound" 
+                id="coffee">
+                <i data-action="CoffeeShopSound" class="ph ph-storefront"></i>
+                <span class="sr-only">Som de Cafeteria</span>
+            </button>
+
+            <button
+            class="effect"
+                data-action="FirePlaceSound" 
+                id="fire">
+                <i data-action="FirePlaceSound" class="ph ph-flame"></i>
+                <span class="sr-only">Som de Lareira</span>
+            </button>
+        </section>
+    </div>
+</body>
+</html>
